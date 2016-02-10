@@ -1,16 +1,18 @@
-describe('reverseString', function(){
-  it('Should return a when a is entered', function(){
-    expect(reverseString("a")).toEqual("a");}
-  );
-  it('Should return b when b is entered', function(){
-    expect(reverseString("b")).toEqual("b");}
+describe('titleCase', function(){
+  it('Entered (The) -- Expected (The)', function(){
+    expect(titleCase("The")).toEqual("The");}
   );
 
-  it('Should return ba when ab is entered', function(){
-    expect(reverseString("ba")).toEqual("ab");}
+  it('Entered (t) -- Expected (T)', function(){
+    expect(titleCase("t")).toEqual("T");}
   );
 
-  it('Should return bca when abc is entered', function(){
-    expect(reverseString("cba")).toEqual("abc");}
+  it('Entered (THe) -- Expected (The)', function(){
+    expect(titleCase("THe")).toEqual("The");}
   );
+
+  it('Entered (THe dog) -- Expected (The Dog)', function(){
+    expect(titleCase("THe dog")).toEqual("The Dog");}
+  );
+
 });
