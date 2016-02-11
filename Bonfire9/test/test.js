@@ -1,16 +1,20 @@
-describe('reverseString', function(){
-  it('Should return a when a is entered', function(){
-    expect(reverseString("a")).toEqual("a");}
-  );
-  it('Should return b when b is entered', function(){
-    expect(reverseString("b")).toEqual("b");}
+
+  describe('chunk', function(){
+
+      it('Entered ([1], 1) -- Expect ([1])', function(){
+      expect(chunk([1], 1)).toEqual([1]);}
+    );
+
+    it('Entered ([1,2], 1) -- Expect ([[1],[2]])', function(){
+    expect(chunk([1,2], 1)).toEqual([[1],[2]]);}
   );
 
-  it('Should return ba when ab is entered', function(){
-    expect(reverseString("ba")).toEqual("ab");}
-  );
+  it('Entered ([1,2,3], 1) -- Expect ([[1],[2],[3]])', function(){
+  expect(chunk([1,2,3], 1)).toEqual([[1],[2],[3]]);}
+);
 
-  it('Should return bca when abc is entered', function(){
-    expect(reverseString("cba")).toEqual("abc");}
-  );
+it('Entered ([1,2,3], 2) -- Expect ([[1,2],[3]])', function(){
+expect(chunk([1,2,3], 2)).toEqual([[1,2],[3]]);}
+);
+
 });
